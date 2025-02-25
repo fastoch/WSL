@@ -27,7 +27,17 @@ It uses lightweight virtual machines.
 
 ---
 
-# 
+# Accessing Linux files in Windows
+
+- we can run `cd` to place ourselves inside our Linux user's home directory
+- then, run `explorer.exe .` to open up our current location inside Windows file explorer
+  - the actual path is \\wsl.localhost\Ubuntu\home\<username> 
+
+---
+
+# GUI Apps in WSL
 
 
-@4/24
+
+
+@8/24
