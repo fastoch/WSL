@@ -35,15 +35,28 @@ It uses lightweight virtual machines.
 - to set a distro as your default WSL distro, run `wsl --set-default <distroName>`
 - to remove a distro: `wsl --unregister <distroName>`
 
-# Accessing Linux files in Windows
+# Accessing Linux files in Windows and Windows files in Linux
 
 - from our Ubuntu VM, we can run `cd` to place ourselves inside our user's home directory
 - then, run `explorer.exe .` to open up our current location inside Windows file explorer
-  - the actual path is \\wsl.localhost\Ubuntu\home\<username> 
+  - the actual path is \\wsl.localhost\Ubuntu\home\<username>
+- run `cd /mnt/c` to access the Windows C drive 
 
-# GUI Apps in WSL
+# Using VS Code with WSL
+
+- install VS Code on Windows
+- open VS Code and press Ctrl + Shift + X to open the Extensions menu
+- Look for the WSL extension and install it
+- press Ctrl + Shift + P and type 'WSL', then select 'Connect to WSL'
+- you can open a terminal within VS Code by pressing Ctrl + J
+- and as you can see, VS Code is now running in Ubuntu
+
+You can start coding in a Linux environment within your Windows machine.
+
+# Using Docker with WSL
 
 
 
 
-@12/24
+
+@16/24
