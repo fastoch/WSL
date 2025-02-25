@@ -5,7 +5,7 @@
 
 ---
 
-# Intro
+# Intro & Installation
 
 WSL = Windows Subsystem for Linux  
 It uses lightweight virtual machines.
@@ -19,11 +19,15 @@ It uses lightweight virtual machines.
 - Open a terminal and run `wsl --install Ubuntu`
 - This will install the latest LTS version
 - Once Ubuntu install is complete, run `wsl -l -v`
-- This will list the installed distros, their state, and the WSL version they use
-- Now, run `wsl -d Ubuntu` to start your Linux VM
-- You'll get prompted to enter a username and pwd
-- 
+- This will list the installed distributions, their state, and the WSL version they use
+- Now, run `wsl -d ubuntu` to start your Linux VM
+- You'll get prompted for entering a username and pwd
+- you can leave your WSL VM by running `exit`
+- to get a list of other available Linux distributions (distros), run `wsl -l --online`
+
+---
+
+# 
 
 
-
-@2/24
+@3/24
