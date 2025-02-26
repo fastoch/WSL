@@ -35,7 +35,7 @@ It uses lightweight virtual machines.
 - to set a distro as your default WSL distro, run `wsl --set-default <distroName>`
 - to remove a distro: `wsl --unregister <distroName>`
 
-# Accessing Linux files in Windows and Windows files in Linux
+# Accessing Linux files in Windows and vice versa
 
 - from our Ubuntu VM, we can run `cd` to place ourselves inside our user's home directory
 - then, run `explorer.exe .` to open up our current location inside Windows file explorer
