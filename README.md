@@ -55,8 +55,9 @@ You can start coding in a Linux environment within your Windows machine.
 
 # Using Docker with WSL
 
+- install Docker Desktop on Windows
+- 
 
 
 
-
-@16/24
+@17/24
