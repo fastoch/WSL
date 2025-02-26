@@ -47,7 +47,8 @@ It uses lightweight virtual machines.
 - install VS Code on Windows
 - open VS Code and press Ctrl + Shift + X to open the Extensions menu
 - Look for the WSL extension and install it
-- press Ctrl + Shift + P and type 'WSL', then select 'Connect to WSL'
+- press Ctrl + Shift + P to open the Command Palette
+  - Type 'WSL' and select 'Connect to WSL'
 - you can open a terminal within VS Code by pressing Ctrl + J
 - and as you can see, VS Code is now running in Ubuntu
 
@@ -56,8 +57,9 @@ You can start coding in a Linux environment within your Windows machine.
 # Using Docker with WSL
 
 - install Docker Desktop on Windows
-- 
+  - make sure to check the 'Use WSL2 instead of Hyper-V' box
+- open VS Code and install the Docker extension
+- The Docker extension makes it easy to build, manage, and deploy containerized applications from VS Code
 
 
-
-@17/24
+@18/24
