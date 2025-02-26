@@ -34,7 +34,10 @@ It uses lightweight virtual machines.
 - to terminate a specific WSL machine: `wsl --terminate <distroName>`
 - to set a distro as your default WSL distro, run `wsl --set-default <distroName>`
 - to remove a distro: `wsl --unregister <distroName>`
-
+- `wsl --status` shows default distro and default version
+- `wsl --update` updates WSL
+- `wsl --version`
+  
 # Accessing Linux files in Windows and vice versa
 
 - from our Ubuntu VM, we can run `cd` to place ourselves inside our user's home directory
@@ -59,7 +62,35 @@ You can start coding in a Linux environment within your Windows machine.
 - install Docker Desktop on Windows
   - make sure to check the 'Use WSL2 instead of Hyper-V' box
 - open VS Code and install the Docker extension
-- The Docker extension makes it easy to build, manage, and deploy containerized applications from VS Code
+  - This extension makes it easy to build, manage, and deploy containerized applications from VS Code
 
+# WSL config files
 
-@18/24
+WSL has 2 config files:
+- Each WSL distro you install has its own `wsl.conf` file located in /etc/wsl.conf
+- And we can have a global config file which applies to all your WSL instances: `.wslconfig`
+
+By default, the global config file does not exist, you need to create it:
+- open powershell as admin
+- run `notepad $env:USERPROFILE\.wslconfig`
+
+Example `.wslconfig` file:
+```bash
+[WSL2]
+networkingMode=mirrored
+```
+
+By default, the networking mode for WSL is set to NAT.  
+
+Setting networkingMode to "mirrored" when using Docker with WSL:  
+https://www.perplexity.ai/search/if-i-set-networkingmode-to-mir-1UvWSUb3SZCMgxlwHNTzjw
+
+# Backing up and Restoring WSL instances
+
+- to back up a WSL instance: `wsl --export <distroName> <destinationFile>`
+- to restore a backed up instance: `wsl --import <nameYourWSLinstance> <destinationFolder> <backupFile>`
+
+**NOTE**:  
+When connecting to an imported instance via `wsl -d <instanceName>`, it will default to the root user.  
+However, you can specify the user account you connect as: `wsl -d <instanceName> -u <userName>`.
+
